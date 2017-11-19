@@ -1,33 +1,26 @@
 import React, { Component } from 'react';
 import {
         StyleSheet,
-        Dimensions,
         TouchableOpacity,
         Text,
         View,
         StatusBar,
 } from 'react-native';
 
+import Header from './Header';
+
 StatusBar.setHidden(true);
 
-const { height } = Dimensions.get('window');
-
 export default class Home extends Component {
+
+        OpenMenu() {
+                this.props.navigation.navigate('DrawerOpen');
+        }
 
         render() {
                 return (
                         <View>
-                                <View style={{ height: height / 8, backgroundColor: '#93b5ed' }}>
-                                        <TouchableOpacity
-                                                onPress={() => {
-                                                        this.props.navigation.navigate('DrawerOpen'); // open drawer
-                                                }}
-                                        >
-                                                <Text>
-                                                        Open click
-                               </Text>
-                                        </TouchableOpacity>
-                                </View>
+                                <Header Open={this.OpenMenu.bind(this)} />
 
                                 <View>
                                         <Text>fdsfdsf</Text>
