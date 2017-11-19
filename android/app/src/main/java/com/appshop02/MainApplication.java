@@ -1,4 +1,4 @@
-package com.appshop01;
+package com.appshop02;
 
 import android.app.Application;
 

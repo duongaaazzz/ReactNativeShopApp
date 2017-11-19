@@ -9,13 +9,18 @@ import {
 StatusBar.setHidden(true);
 
 export default class Anthentication extends Component {
+
+        static navigationOptions = {
+                title: 'Anthentication'
+        };
+
         render() {
                 return (
-                       <View>
-                               <Text>
-                                       Anthentication
+                        <View>
+                                <Text>
+                                        Anthentication
                                </Text>
-                       </View>
+                        </View>
                 );
         }
 }

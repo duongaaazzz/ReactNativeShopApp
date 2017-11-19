@@ -9,13 +9,17 @@ import {
 StatusBar.setHidden(true);
 
 export default class ChangeInfo extends Component {
+
+        static navigationOptions = {
+                title: 'ChangeInfo'
+        };
         render() {
                 return (
-                       <View>
-                               <Text>
+                        <View>
+                                <Text>
                                         ChangeInfo
                                </Text>
-                       </View>
+                        </View>
                 );
         }
 }

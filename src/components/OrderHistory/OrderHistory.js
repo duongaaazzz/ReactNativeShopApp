@@ -9,6 +9,8 @@ import {
 StatusBar.setHidden(true);
 
 export default class OrderHistory extends Component {
+
+
         render() {
                 return (
                         <View>

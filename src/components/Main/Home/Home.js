@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {
         StyleSheet,
+        Dimensions,
+        TouchableOpacity,
         Text,
         View,
         StatusBar,
@@ -8,14 +10,29 @@ import {
 
 StatusBar.setHidden(true);
 
+const { height } = Dimensions.get('window');
+
 export default class Home extends Component {
+
         render() {
                 return (
-                       <View>
-                               <Text>
-                                        Home
+                        <View>
+                                <View style={{ height: height / 8, backgroundColor: '#93b5ed' }}>
+                                        <TouchableOpacity
+                                                onPress={() => {
+                                                        this.props.navigation.navigate('DrawerOpen'); // open drawer
+                                                }}
+                                        >
+                                                <Text>
+                                                        Open click
                                </Text>
-                       </View>
+                                        </TouchableOpacity>
+                                </View>
+
+                                <View>
+                                        <Text>fdsfdsf</Text>
+                                </View>
+                        </View>
                 );
         }
 }
