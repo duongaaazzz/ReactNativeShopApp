@@ -1,4 +1,4 @@
-package com.shopappkhoapham;
+package com.appshop01;
 
 import android.app.Application;
 
