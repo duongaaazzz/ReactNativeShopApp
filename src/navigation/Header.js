@@ -9,8 +9,8 @@ import {
         View,
 } from 'react-native';
 
-import icLogo from '../../../media/appIcon/ic_logo.png';
-import icMenu from '../../../media/appIcon/ic_menu.png';
+import icLogo from '../media/appIcon/ic_logo.png';
+import icMenu from '../media/appIcon/ic_menu.png';
 
 const { height } = Dimensions.get('window');
 
@@ -58,7 +58,6 @@ const styles = StyleSheet.create({
         wrapper: {
                 justifyContent: 'space-around',
                 padding: height / 100,
-                height: height / 8,
                 backgroundColor: '#34B089',
         },
         menu: {

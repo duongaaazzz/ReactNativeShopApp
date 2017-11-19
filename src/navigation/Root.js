@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {
-        TabNavigator,
         DrawerNavigator
 } from 'react-navigation';
 import {
@@ -14,45 +13,22 @@ import Authentication from '../components/Authemtication/Authentication';
 import ChangeInfo from '../components/ChangeInfo/ChangeInfo';
 import OrderHistory from '../components/OrderHistory/OrderHistory';
 
-
-import Cart from '../components/Main/Cart/Cart';
-import Contact from '../components/Main/Contact/Contact';
-import Home from '../components/Main/Home/Home';
-import Seach from '../components/Main/Seach/Seach';
-import Shop from '../components/Main/Shop/Shop';
+import Tabbar from './Tabbar';
 
 const { width } = Dimensions.get('window');
 
-class SideMenu extends Component {
+class Root extends Component {
         state = {}
         render() {
                 return (
-                        <Draw />
+                        <SideMenu />
                 );
         }
 }
 
-export const Tab = TabNavigator({
-        HomeTab: {
-                screen: Home
-        },
-        ShopTab: {
-                screen: Shop
-        },
-        CartTab: {
-                screen: Cart
-        },
-        SeachTab: {
-                screen: Seach
-        },
-        ContactTab: {
-                screen: Contact
-        },
-});
-
-export const Draw = DrawerNavigator({
+export const SideMenu = DrawerNavigator({
         Stack: {
-                screen: Tab
+                screen: Tabbar
         },
         AuthenticationScreen: {
                 screen: Authentication
@@ -63,7 +39,6 @@ export const Draw = DrawerNavigator({
         OrderHistoryScreen: {
                 screen: OrderHistory
         }
-
 },
         {
                 drawerWidth: width / 1.3,
@@ -72,4 +47,4 @@ export const Draw = DrawerNavigator({
         }
 );
 
-export default SideMenu;
+export default Root;

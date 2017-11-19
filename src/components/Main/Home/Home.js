@@ -1,26 +1,58 @@
 import React, { Component } from 'react';
 import {
+        Dimensions,
+        Image,
         StyleSheet,
-        TouchableOpacity,
         Text,
         View,
-        StatusBar,
 } from 'react-native';
 
-import Header from './Header';
 
-StatusBar.setHidden(true);
+import icHome from '../../../media/appIcon/home0.png';
+import icHomeS from '../../../media/appIcon/home.png';
+
+
+const { height } = Dimensions.get('window');
+
 
 export default class Home extends Component {
 
-        OpenMenu() {
-                this.props.navigation.navigate('DrawerOpen');
-        }
+        static navigationOptions = {
+                tabBarIcon: ({ focused }) => {
+                        const img = focused ? icHomeS : icHome;
+                        return (
+                                <Image
+                                        source={img}
+                                        style={{
+                                                height: height / 20,
+                                                width: height / 20
+                                        }}
+                                />
+                        );
+                },
+
+                tabBarLabel: ({ focused }) => {
+                        const colorText = focused ? '#34B089' : 'gray';
+                        return (
+                                <Text
+                                        style={{
+                                                color: colorText,
+                                                fontFamily: 'Avenir',
+                                                fontSize: 13
+                                        }}
+                                >
+                                        Home
+                                        </Text>
+                        );
+                }
+
+        };
+
 
         render() {
                 return (
                         <View>
-                                <Header OpenMenu={this.OpenMenu.bind(this)} />
+                              
 
                                 <View>
                                         <Text>fdsfdsf</Text>
