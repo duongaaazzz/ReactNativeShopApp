@@ -20,7 +20,7 @@ export default class Home extends Component {
         render() {
                 return (
                         <View>
-                                <Header Open={this.OpenMenu.bind(this)} />
+                                <Header OpenMenu={this.OpenMenu.bind(this)} />
 
                                 <View>
                                         <Text>fdsfdsf</Text>

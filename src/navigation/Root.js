@@ -66,7 +66,7 @@ export const Draw = DrawerNavigator({
 
 },
         {
-                drawerWidth: width / 1.2,
+                drawerWidth: width / 1.3,
                 drawerPosition: 'left',
                 contentComponent: props => <Menu {...props} />
         }
