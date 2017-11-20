@@ -14,7 +14,7 @@ import Home from '../components/Main/Home/Home';
 import Seach from '../components/Main/Seach/Seach';
 
 
-import Header from './Header';
+import Header from '../components/Header';
 
 const { height } = Dimensions.get('window');
 

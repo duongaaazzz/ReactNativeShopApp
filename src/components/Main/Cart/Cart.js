@@ -19,13 +19,47 @@ class Cart extends Component {
                 tabBarIcon: ({ focused }) => {
                         const img = focused ? icCart : icCartS;
                         return (
-                                <Image
-                                        source={img}
+                                <View
                                         style={{
-                                                height: height / 20,
-                                                width: height / 20
+                                                flex: 1,
+                                                alignSelf: 'stretch',
+                                                justifyContent: 'space-around',
+                                                alignItems: 'center'
                                         }}
-                                />
+                                >
+                                        <Image
+                                                source={img}
+                                                style={{
+                                                        height: height / 20,
+                                                        width: height / 20
+                                                }}
+                                        />
+                                        <View
+                                                style={{
+                                                        justifyContent: 'center',
+                                                        alignItems: 'center',
+                                                        height: height / 30,
+                                                        width: height / 30,
+                                                        position: 'absolute',
+                                                        top: 0,
+                                                        right: -height / 20,
+                                                        borderRadius: 50,
+                                                        backgroundColor: 'red'
+                                                }}
+                                        >
+                                                <Text
+                                                        style={{
+                                                                fontSize: 9,
+                                                                color: 'white',
+                                                                fontFamily: 'Avenir',
+                                                                fontWeight: 'bold'
+                                                        }}
+                                                >
+                                                        99
+                                                </Text>
+                                        </View>
+                                </View>
+
                         );
                 },
 
@@ -45,7 +79,7 @@ class Cart extends Component {
                 }
 
         };
-        
+
 
         render() {
                 return (
