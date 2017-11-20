@@ -16,19 +16,18 @@ import midiImage from '../../../media/temp/midi.jpg';
 import miniImage from '../../../media/temp/mini.jpg';
 import partyImage from '../../../media/temp/party.jpg';
 
+import SideSwiper from './SideSwiper';
 
-const { width, height } = Dimensions.get('window');
+const { height } = Dimensions.get('window');
 
 
 class Category extends Component {
 
         render() {
                 const {
-                        imageStyle,
                         textStyle,
                         wrapper,
                 } = styles;
-
                 return (
                         <View style={wrapper}>
                                 <View style={{ flex: 1, justifyContent: 'center' }}>
@@ -38,22 +37,44 @@ class Category extends Component {
                                 <View style={{ flex: 4 }}>
                                         <Swiper
                                                 autoplay
+                                                activeDotColor='#34B089'
+                                                paginationStyle={{ bottom: 3 }}
                                         >
-                                                <Image source={fitImage} style={imageStyle} />
-                                                <Image source={littleImage} style={imageStyle} />
-                                                <Image source={maxiImage} style={imageStyle} />
-                                                <Image source={midiImage} style={imageStyle} />
-                                                <Image source={miniImage} style={imageStyle} />
-                                                <Image source={partyImage} style={imageStyle} />
+                                                <SideSwiper
+                                                        sourceImage={fitImage}
+                                                        textImage='Fit'
+                                                />
+
+                                                <SideSwiper
+                                                        sourceImage={littleImage}
+                                                        textImage='Little'
+                                                />
+
+                                                <SideSwiper
+                                                        sourceImage={maxiImage}
+                                                        textImage='Maxi'
+                                                />
+
+                                                <SideSwiper
+                                                        sourceImage={midiImage}
+                                                        textImage='Midi'
+                                                />
+
+                                                <SideSwiper
+                                                        sourceImage={miniImage}
+                                                        textImage='Mini'
+                                                />
+
+                                                <SideSwiper
+                                                        sourceImage={partyImage}
+                                                        textImage='Party'
+                                                />
                                         </Swiper>
                                 </View>
                         </View>
                 );
         }
 }
-
-const imageWidth = width - (height * 0.03);
-const imageHeight = imageWidth / 2;
 
 const styles = StyleSheet.create({
         wrapper: {
@@ -73,10 +94,6 @@ const styles = StyleSheet.create({
                 fontSize: 20,
                 color: '#a6a6a6'
         },
-        imageStyle: {
-                height: imageHeight,
-                width: imageWidth
-        }
 });
 
 export default Category;
