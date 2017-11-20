@@ -44,7 +44,7 @@ class Cart extends Component {
                                                         top: 0,
                                                         right: -height / 20,
                                                         borderRadius: 50,
-                                                        backgroundColor: 'red'
+                                                        backgroundColor: 'blue'
                                                 }}
                                         >
                                                 <Text
@@ -55,7 +55,7 @@ class Cart extends Component {
                                                                 fontWeight: 'bold'
                                                         }}
                                                 >
-                                                        99
+                                                        22
                                                 </Text>
                                         </View>
                                 </View>

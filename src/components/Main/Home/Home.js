@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {
         Dimensions,
         Image,
-        StyleSheet,
         Text,
         View,
 } from 'react-native';
@@ -11,6 +10,9 @@ import {
 import icHome from '../../../media/appIcon/home0.png';
 import icHomeS from '../../../media/appIcon/home.png';
 
+
+import Conllection from './Collection';
+import Category from './Category';
 
 const { height } = Dimensions.get('window');
 
@@ -51,12 +53,9 @@ export default class Home extends Component {
 
         render() {
                 return (
-                        <View>
-                              
-
-                                <View>
-                                        <Text>fdsfdsf</Text>
-                                </View>
+                        <View style={{ backgroundColor: '#e6e6e6', flex: 1 }}>
+                                <Conllection />
+                                <Category />
                         </View>
                 );
         }
