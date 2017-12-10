@@ -53,4 +53,8 @@ export const Tab = TabNavigator({
         ContactTab: {
                 screen: Contact
         },
-});
+},
+        {
+                tabBarPosition: 'bottom'
+        }
+);

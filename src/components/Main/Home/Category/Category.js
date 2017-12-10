@@ -9,12 +9,12 @@ import {
 
 import Swiper from 'react-native-swiper';
 
-import fitImage from '../../../media/temp/fit.jpg';
-import littleImage from '../../../media/temp/little.jpg';
-import maxiImage from '../../../media/temp/maxi.jpg';
-import midiImage from '../../../media/temp/midi.jpg';
-import miniImage from '../../../media/temp/mini.jpg';
-import partyImage from '../../../media/temp/party.jpg';
+import fitImage from '../../../../media/temp/fit.jpg';
+import littleImage from '../../../../media/temp/little.jpg';
+import maxiImage from '../../../../media/temp/maxi.jpg';
+import midiImage from '../../../../media/temp/midi.jpg';
+import miniImage from '../../../../media/temp/mini.jpg';
+import partyImage from '../../../../media/temp/party.jpg';
 
 import SideSwiper from './SideSwiper';
 
@@ -36,6 +36,7 @@ class Category extends Component {
 
                                 <View style={{ flex: 4 }}>
                                         <Swiper
+                                                key='fdsfsdf'
                                                 autoplay
                                                 activeDotColor='#34B089'
                                                 paginationStyle={{ bottom: 3 }}

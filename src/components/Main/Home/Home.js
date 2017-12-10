@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {
+        ScrollView,
         Dimensions,
         Image,
         Text,
@@ -10,9 +11,9 @@ import {
 import icHome from '../../../media/appIcon/home0.png';
 import icHomeS from '../../../media/appIcon/home.png';
 
-
 import Conllection from './Collection';
-import Category from './Category';
+import Category from './Category/Category';
+import TopProduct from './TopProduct/TopProduct';
 
 const { height } = Dimensions.get('window');
 
@@ -53,10 +54,11 @@ export default class Home extends Component {
 
         render() {
                 return (
-                        <View style={{ backgroundColor: '#e6e6e6', flex: 1 }}>
+                        <ScrollView style={{ backgroundColor: '#e6e6e6', flex: 1 }}>
                                 <Conllection />
                                 <Category />
-                        </View>
+                                <TopProduct />
+                        </ScrollView>
                 );
         }
 }

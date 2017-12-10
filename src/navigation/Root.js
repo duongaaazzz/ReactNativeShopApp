@@ -6,7 +6,7 @@ import {
         Dimensions
 } from 'react-native';
 
-import Menu from './Menu';
+import Menu from '../components/Menu/Menu';
 
 
 import Authentication from '../components/Authemtication/Authentication';
