@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 import {
-        StyleSheet,
-        TextInput,
-        Image,
-        Dimensions,
-        TouchableOpacity,
-        Text,
-        View,
+        StyleSheet, TextInput, Image, Dimensions, TouchableOpacity, Text, View,
 } from 'react-native';
 
 import icLogo from '../media/appIcon/ic_logo.png';
@@ -19,11 +13,7 @@ class Header extends Component {
         state = {}
         render() {
                 const {
-                        titleStyle,
-                        iconSize,
-                        wrapper,
-                        menu,
-                        textInputs
+                        titleStyle, iconSize, wrapper, menu, textInputs
                  } = styles;
 
                 return (

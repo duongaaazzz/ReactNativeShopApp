@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import {
-        StyleSheet,
-        TouchableOpacity,
-        Dimensions,
-        View,
-        Text
+        StyleSheet, TouchableOpacity, Dimensions, View, Text
 } from 'react-native';
 
 const { height } = Dimensions.get('window');
@@ -13,8 +9,7 @@ const { height } = Dimensions.get('window');
 class Contact extends Component {
         render() {
                 const {
-                        txtStyle,
-                        btnSignIn
+                        txtStyle, btnSignIn
                 } = styles;
 
                 return (
@@ -36,12 +31,9 @@ const styles = StyleSheet.create({
                 alignItems: 'center',
                 width: height * 0.3,
                 backgroundColor: 'white',
-
         },
         txtStyle: {
-                color: '#34B089',
-                fontFamily: 'Avenir',
-                fontSize: 20,
+                color: '#34B089', fontFamily: 'Avenir', fontSize: 20,
         }
 });
 

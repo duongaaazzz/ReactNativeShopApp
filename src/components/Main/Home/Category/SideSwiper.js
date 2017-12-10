@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import {
-        Dimensions,
-        StyleSheet,
-        View,
-        Text,
-        Image
+        Dimensions, StyleSheet, View, Text, Image
 } from 'react-native';
 
 
@@ -14,9 +10,7 @@ const { width, height } = Dimensions.get('window');
 class SideSwiper extends Component {
         render() {
                 const {
-                        wrapper,
-                        textStyle,
-                        imageStyle
+                        wrapper, textStyle, imageStyle
                 } = styles;
 
                 return (

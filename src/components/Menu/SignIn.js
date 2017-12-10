@@ -1,21 +1,16 @@
 import React, { Component } from 'react';
 import {
-        StyleSheet,
-        TouchableOpacity,
-        Dimensions,
-        View,
-        Text
+        StyleSheet, TouchableOpacity, Dimensions, View, Text
 } from 'react-native';
 
 const { height } = Dimensions.get('window');
 
 
 class SignIn extends Component {
+
         render() {
                 const {
-                        txtUserName,
-                        txtStyle,
-                        btn
+                        txtUserName, txtStyle, btn
                 } = styles;
 
                 return (
@@ -26,24 +21,26 @@ class SignIn extends Component {
                                         alignItems: 'center'
                                 }}
                         >
-
                                 <Text style={txtUserName}>User name</Text>
 
                                 <View>
                                         <TouchableOpacity
                                                 style={btn}
+                                                onPress={this.props.goto.GotoOrderHistoryScreen}
                                         >
                                                 <Text style={txtStyle}>Order history</Text>
                                         </TouchableOpacity>
 
                                         <TouchableOpacity
                                                 style={btn}
+                                                onPress={this.props.goto.GotoChangeInfoScreen}
                                         >
                                                 <Text style={txtStyle}>Change info</Text>
                                         </TouchableOpacity>
 
                                         <TouchableOpacity
                                                 style={btn}
+                                                onPress={this.props.goto.GotoAuthenticationScreen}
                                         >
                                                 <Text style={txtStyle}>Sign out</Text>
                                         </TouchableOpacity>

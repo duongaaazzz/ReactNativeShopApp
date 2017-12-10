@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import {
-        ScrollView,
-        Dimensions,
-        Image,
-        Text,
-        View,
+        ScrollView, Dimensions, Image, Text,
 } from 'react-native';
 
 

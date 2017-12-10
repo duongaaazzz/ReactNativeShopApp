@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import {
-        Image,
-        Dimensions,
-        StyleSheet,
-        View,
+        Image, Dimensions, StyleSheet, View,
 } from 'react-native';
 
 import proFileIcon from '../../media/temp/profile.png';
@@ -18,22 +15,32 @@ class Home extends Component {
         constructor(props) {
                 super(props);
                 this.state = {
-                        isLogedIn: false
+                        isLogedIn: true
                 };
         }
 
-        componentDidMount() {
-                this.props.navigation.navigate('DrawerOpen');
-        }
-
         render() {
-                const sinInJSX = this.state.isLogedIn ? <SignIn /> : <NotSignIn />;
+                const { navigate } = this.props.navigation;
+
+                const goto = {
+                        GotoOrderHistoryScreen() {
+                                navigate('OrderHistoryScreen');
+                        },
+                        GotoChangeInfoScreen() {
+                                navigate('ChangeInfoScreen');
+                        },
+                        GotoAuthenticationScreen() {
+                                navigate('AuthenticationScreen');
+                        }
+                };
+                const sinInJSX = this.state.isLogedIn ?
+                        <SignIn goto={goto} />
+                        : <NotSignIn />;
+
                 const {
-                        viewSign,
-                        viewImg,
-                        proImageIcon,
-                        wrapper
+                        viewSign, viewImg, proImageIcon, wrapper
                 } = styles;
+
                 return (
                         <View style={wrapper}>
                                 <View style={viewImg}>

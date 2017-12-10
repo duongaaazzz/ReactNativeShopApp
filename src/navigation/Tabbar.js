@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+
 import {
         TabNavigator,
 } from 'react-navigation';
+
 import {
-        Dimensions,
-        View,
+        Dimensions, View,
 } from 'react-native';
 
 
@@ -21,11 +22,9 @@ const { height } = Dimensions.get('window');
 
 class Tabbar extends Component {
 
-
         OpenMenu() {
                 this.props.navigation.navigate('DrawerOpen');
         }
-
 
         render() {
                 return (

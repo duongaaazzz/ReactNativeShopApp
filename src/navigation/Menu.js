@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import {
-        TouchableOpacity,
-        View,
-        Text
+        TouchableOpacity, View, Text
 } from 'react-native';
 
 class Home extends Component {
@@ -25,7 +23,7 @@ class Home extends Component {
 
                                 <TouchableOpacity
                                         onPress={() => {
-                                               navigate('ChangeInfoScreen');
+                                                navigate('ChangeInfoScreen');
                                         }}
                                 >
                                         <Text>
