@@ -16,6 +16,7 @@ class Contact extends Component {
                         <View>
                                 <TouchableOpacity
                                         style={btnSignIn}
+                                        onPress={this.props.goto.GotoAuthenticationScreen}
                                 >
                                         <Text style={txtStyle}>Sign In</Text>
                                 </TouchableOpacity>

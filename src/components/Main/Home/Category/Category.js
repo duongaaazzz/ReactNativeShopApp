@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import {
-        Dimensions,
-        StyleSheet,
-        Image,
-        View,
-        Text
+        Dimensions, StyleSheet, View, Text
 } from 'react-native';
 
 import Swiper from 'react-native-swiper';
@@ -25,8 +21,7 @@ class Category extends Component {
 
         render() {
                 const {
-                        textStyle,
-                        wrapper,
+                        textStyle, wrapper,
                 } = styles;
                 return (
                         <View style={wrapper}>

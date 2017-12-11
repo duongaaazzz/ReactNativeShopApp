@@ -15,7 +15,7 @@ class Home extends Component {
         constructor(props) {
                 super(props);
                 this.state = {
-                        isLogedIn: true
+                        isLogedIn: false
                 };
         }
 
@@ -35,7 +35,7 @@ class Home extends Component {
                 };
                 const sinInJSX = this.state.isLogedIn ?
                         <SignIn goto={goto} />
-                        : <NotSignIn />;
+                        : <NotSignIn goto={goto} />;
 
                 const {
                         viewSign, viewImg, proImageIcon, wrapper

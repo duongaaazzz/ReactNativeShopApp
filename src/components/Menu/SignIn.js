@@ -40,7 +40,6 @@ class SignIn extends Component {
 
                                         <TouchableOpacity
                                                 style={btn}
-                                                onPress={this.props.goto.GotoAuthenticationScreen}
                                         >
                                                 <Text style={txtStyle}>Sign out</Text>
                                         </TouchableOpacity>
