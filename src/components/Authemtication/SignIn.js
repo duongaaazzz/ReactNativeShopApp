@@ -6,7 +6,10 @@ import {
 const { width, height } = Dimensions.get('window');
 
 class SignIn extends Component {
-        state = {}
+        static navigationOptions = {
+                
+        }
+
         render() {
                 const {
                         txtInput, txtStyle, btnStyle, wrapper

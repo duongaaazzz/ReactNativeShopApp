@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {
         StyleSheet, Text, View, Dimensions, TouchableOpacity, Image
 } from 'react-native';
+import { NavigationActions } from 'react-navigation';
 
 import icLogo from '../../media/appIcon/ic_logo.png';
 import icback from '../../media/appIcon/back_white.png';
@@ -28,11 +29,14 @@ export default class Anthentication extends Component {
 
                 const selectActiveJSX = this.state.isActiveSignIn ? <SignIn /> : <NonSignIn />;
 
+                const { navigate } = this.props.navigation;
 
                 return (
                         <View style={wrapper}>
                                 <View style={menu} >
-                                        <TouchableOpacity onPress={this.props.OpenMenu}>
+                                        <TouchableOpacity
+                                                onPress={() => navigate('Stack')}
+                                        >
                                                 <Image
                                                         source={icback}
                                                         style={iconSize}
@@ -55,12 +59,18 @@ export default class Anthentication extends Component {
                                 <View style={containerBtn}>
                                         <TouchableOpacity
                                                 style={btnSignIn}
+                                                onPress={() => this.setState({
+                                                        isActiveSignIn: true
+                                                })}
                                         >
                                                 <Text style={activeStyle}>Sign In</Text>
                                         </TouchableOpacity>
 
                                         <TouchableOpacity
                                                 style={btnSignUp}
+                                                onPress={() => this.setState({
+                                                        isActiveSignIn: false
+                                                })}
                                         >
                                                 <Text style={nonActiveStyle}>Sign Up</Text>
                                         </TouchableOpacity>
@@ -78,6 +88,11 @@ const styles = StyleSheet.create({
                 flex: 1,
                 padding: height / 100,
                 backgroundColor: '#34B089',
+        },
+        titleStyle: {
+                color: '#FFF',
+                fontFamily: 'Avenir',
+                fontSize: 20
         },
         menu: {
                 flexDirection: 'row',

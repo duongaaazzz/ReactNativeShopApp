@@ -12,7 +12,7 @@ StatusBar.setHidden(true);
 export default class App extends Component {
         render() {
                 return (
-                        <Authentication />
+                        <Root />
                 );
         }
 }
