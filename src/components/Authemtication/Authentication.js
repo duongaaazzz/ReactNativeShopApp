@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {
         StyleSheet, Text, View, Dimensions, TouchableOpacity, Image
 } from 'react-native';
-import { NavigationActions } from 'react-navigation';
 
 import icLogo from '../../media/appIcon/ic_logo.png';
 import icback from '../../media/appIcon/back_white.png';
@@ -27,15 +26,17 @@ export default class Anthentication extends Component {
                         btnSignUp, activeStyle, nonActiveStyle, contianSignInStyle
                 } = styles;
 
-                const selectActiveJSX = this.state.isActiveSignIn ? <SignIn /> : <NonSignIn />;
+                const selectActiveJSX = this.state.isActiveSignIn ?
+                        <SignIn />
+                        : <NonSignIn />;
 
-                const { navigate } = this.props.navigation;
+                const { goBack } = this.props.navigation;
 
                 return (
                         <View style={wrapper}>
                                 <View style={menu} >
                                         <TouchableOpacity
-                                                onPress={() => navigate('Stack')}
+                                                onPress={() => goBack()}
                                         >
                                                 <Image
                                                         source={icback}
@@ -63,7 +64,14 @@ export default class Anthentication extends Component {
                                                         isActiveSignIn: true
                                                 })}
                                         >
-                                                <Text style={activeStyle}>Sign In</Text>
+                                                <Text
+                                                        style={
+                                                                this.state.isActiveSignIn ?
+                                                                        activeStyle : nonActiveStyle
+                                                        }
+                                                >
+                                                        Sign In
+                                                </Text>
                                         </TouchableOpacity>
 
                                         <TouchableOpacity
@@ -72,7 +80,14 @@ export default class Anthentication extends Component {
                                                         isActiveSignIn: false
                                                 })}
                                         >
-                                                <Text style={nonActiveStyle}>Sign Up</Text>
+                                                <Text
+                                                        style={
+                                                                !this.state.isActiveSignIn ?
+                                                                        activeStyle : nonActiveStyle
+                                                        }
+                                                >
+                                                        Sign Up
+                                                </Text>
                                         </TouchableOpacity>
 
                                 </View>

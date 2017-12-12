@@ -7,7 +7,7 @@ const { width, height } = Dimensions.get('window');
 
 class SignIn extends Component {
         static navigationOptions = {
-                
+
         }
 
         render() {
