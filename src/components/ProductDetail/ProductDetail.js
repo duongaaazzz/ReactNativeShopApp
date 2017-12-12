@@ -11,11 +11,13 @@ export default class ProductDetail extends Component {
 
                 return (
                         <View>
+                                <Text >ProductDetail</Text>
+
                                 <TouchableOpacity
                                         onPress={() => goBack()}
                                 >
 
-                                        <Text >Dress</Text>
+                                        <Text >back</Text>
                                 </TouchableOpacity>
                         </View>
                 );

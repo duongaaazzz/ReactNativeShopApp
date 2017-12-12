@@ -16,6 +16,7 @@ export default class Home extends Component {
         GotoConllection() {
                 this.props.navigation.navigate('ProductDetailScreen');
         }
+        
         GotoTopProduct() {
                 this.props.navigation.navigate('ProductDetailScreen');
         }

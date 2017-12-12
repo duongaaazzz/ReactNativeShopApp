@@ -7,7 +7,7 @@ import {
 import icHome from '../../../media/appIcon/home0.png';
 import icHomeS from '../../../media/appIcon/home.png';
 
-import NavigatorHome from './NavigatorHome';
+import NavigatorHome from './HomeNavigator';
 
 const { height } = Dimensions.get('window');
 

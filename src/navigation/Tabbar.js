@@ -9,10 +9,10 @@ import {
 } from 'react-native';
 
 
-import Cart from '../components/Main/Cart/Cart';
+import Cart from '../components/Main/Cart/CartTab';
 import Contact from '../components/Main/Contact/Contact';
 import Home from '../components/Main/Home/HomeTab';
-import Seach from '../components/Main/Seach/Seach';
+import Search from '../components/Main/Search/SearchNavigator';
 
 
 import Header from '../components/Header';
@@ -47,7 +47,7 @@ export const Tab = TabNavigator({
                 screen: Cart
         },
         SeachTab: {
-                screen: Seach
+                screen: Search
         },
         ContactTab: {
                 screen: Contact
