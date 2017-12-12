@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import {
-        Dimensions,
-        StyleSheet,
-        Image,
-        View,
-        Text
+        Dimensions, StyleSheet, View, Text
 } from 'react-native';
 
 import productImage1 from '../../../../media/temp/sp1.jpeg';
@@ -19,12 +15,14 @@ const { width, height } = Dimensions.get('window');
 
 
 class TopProduct extends Component {
+
+        GotoProductDetail() {
+                this.props.goto();
+        }
+
         render() {
                 const {
-                        body,
-                        wrapper,
-                        titleView,
-                        titleText,
+                        body, wrapper, titleView, titleText,
                 } = styles;
 
                 return (
@@ -35,36 +33,42 @@ class TopProduct extends Component {
 
                                 <View style={body}>
                                         <ProductContain
+                                                goto={this.GotoProductDetail.bind(this)}
                                                 nameProduct='ds fsdf'
                                                 priceProduct='200' s
                                                 sourceImage={productImage1}
                                         />
 
                                         <ProductContain
+                                                goto={this.GotoProductDetail.bind(this)}
                                                 nameProduct='sdfs ffg'
                                                 priceProduct='200' s
                                                 sourceImage={productImage2}
                                         />
 
                                         <ProductContain
+                                                goto={this.GotoProductDetail.bind(this)}
                                                 nameProduct='1hd gh'
                                                 priceProduct='200' s
                                                 sourceImage={productImage3}
                                         />
 
                                         <ProductContain
+                                                goto={this.GotoProductDetail.bind(this)}
                                                 nameProduct='1 sfg sf s fg'
                                                 priceProduct='200' s
                                                 sourceImage={productImage4}
                                         />
 
                                         <ProductContain
+                                                goto={this.GotoProductDetail.bind(this)}
                                                 nameProduct='hdf ghdf as'
                                                 priceProduct='200' s
                                                 sourceImage={productImage5}
                                         />
 
                                         <ProductContain
+                                                goto={this.GotoProductDetail.bind(this)}
                                                 nameProduct='ds fsdf'
                                                 priceProduct='200' s
                                                 sourceImage={productImage1}

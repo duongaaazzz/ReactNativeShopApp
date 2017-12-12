@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-        Dimensions, StyleSheet, View, Text, Image
+        Dimensions, StyleSheet, Text, Image, TouchableOpacity
 } from 'react-native';
 
 
@@ -14,10 +14,13 @@ class SideSwiper extends Component {
                 } = styles;
 
                 return (
-                        <View style={wrapper} >
+                        <TouchableOpacity
+                                style={wrapper}
+                                onPress={this.props.gotoList}
+                        >
                                 <Image source={this.props.sourceImage} style={imageStyle} />
                                 <Text style={textStyle}>{this.props.textImage} Dress</Text>
-                        </View>
+                        </TouchableOpacity>
                 );
         }
 }

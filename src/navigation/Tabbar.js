@@ -11,7 +11,7 @@ import {
 
 import Cart from '../components/Main/Cart/Cart';
 import Contact from '../components/Main/Contact/Contact';
-import Home from '../components/Main/Home/Home';
+import Home from '../components/Main/Home/HomeTab';
 import Seach from '../components/Main/Seach/Seach';
 
 

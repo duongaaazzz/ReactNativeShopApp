@@ -1,25 +1,17 @@
 import React, { Component } from 'react';
 import {
-        Dimensions,
-        StyleSheet,
-        Image,
-        View,
-        Text
+        Dimensions, StyleSheet, Image, View, Text
 } from 'react-native';
 
 import bannerImage from '../../../media/temp/banner.jpg';
 
-
 const { width, height } = Dimensions.get('window');
-
 
 class Collection extends Component {
 
         render() {
                 const {
-                        imageStyle,
-                        textStyle,
-                        wrapper,
+                        imageStyle, textStyle, wrapper,
                 } = styles;
 
                 return (

@@ -1,17 +1,8 @@
 import React, { Component } from 'react';
 import {
-        Dimensions,
-        StyleSheet,
-        Image,
-        View,
-        Text
+        Dimensions, StyleSheet, Image, View, Text, TouchableOpacity
 } from 'react-native';
 
-import productImage1 from '../../../../media/temp/sp1.jpeg';
-import productImage2 from '../../../../media/temp/sp2.jpeg';
-import productImage3 from '../../../../media/temp/sp3.jpeg';
-import productImage4 from '../../../../media/temp/sp4.jpeg';
-import productImage5 from '../../../../media/temp/sp5.jpeg';
 
 const { width, height } = Dimensions.get('window');
 const withProdut = (width - (height * 0.05)) / 2;
@@ -28,11 +19,14 @@ class ProductContain extends Component {
 
 
                 return (
-                        <View style={productContainer}>
+                        <TouchableOpacity 
+                                style={productContainer}
+                                onPress={this.props.goto}
+                        >
                                 <Image style={imageStyle} source={this.props.sourceImage} />
                                 <Text style={textTitleName}>{this.props.nameProduct}</Text>
                                 <Text style={textTitlePrice}>{this.props.priceProduct}$</Text>
-                        </View>
+                        </TouchableOpacity>
                 );
         }
 }

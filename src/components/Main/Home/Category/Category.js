@@ -19,6 +19,10 @@ const { height } = Dimensions.get('window');
 
 class Category extends Component {
 
+        GotoCategory() {
+                this.props.goto();
+        }
+
         render() {
                 const {
                         textStyle, wrapper,
@@ -37,31 +41,37 @@ class Category extends Component {
                                                 paginationStyle={{ bottom: 3 }}
                                         >
                                                 <SideSwiper
+                                                        gotoList={this.GotoCategory.bind(this)}
                                                         sourceImage={fitImage}
                                                         textImage='Fit'
                                                 />
 
                                                 <SideSwiper
+                                                        gotoList={this.GotoCategory.bind(this)}
                                                         sourceImage={littleImage}
                                                         textImage='Little'
                                                 />
 
                                                 <SideSwiper
+                                                        gotoList={this.GotoCategory.bind(this)}
                                                         sourceImage={maxiImage}
                                                         textImage='Maxi'
                                                 />
 
                                                 <SideSwiper
+                                                        gotoList={this.GotoCategory.bind(this)}
                                                         sourceImage={midiImage}
                                                         textImage='Midi'
                                                 />
 
                                                 <SideSwiper
+                                                        gotoList={this.GotoCategory.bind(this)}
                                                         sourceImage={miniImage}
                                                         textImage='Mini'
                                                 />
 
                                                 <SideSwiper
+                                                        gotoList={this.GotoCategory.bind(this)}
                                                         sourceImage={partyImage}
                                                         textImage='Party'
                                                 />
