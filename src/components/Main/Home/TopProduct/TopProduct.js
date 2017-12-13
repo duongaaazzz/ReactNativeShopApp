@@ -11,7 +11,7 @@ import productImage5 from '../../../../media/temp/sp5.jpeg';
 
 import ProductContain from './ProductContain';
 
-const { width, height } = Dimensions.get('window');
+const { height } = Dimensions.get('window');
 
 
 class TopProduct extends Component {

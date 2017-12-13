@@ -16,6 +16,7 @@ class NavigatorHome extends Component {
 }
 
 const Navigator = StackNavigator({
+
         HomeScreen: {
                 screen: Home
         },
@@ -24,7 +25,7 @@ const Navigator = StackNavigator({
         },
         ListProductScreen: {
                 screen: ListProduct
-        }
+        },
 },
         {
                 headerMode: 'none'

@@ -12,7 +12,7 @@ import {
 import Cart from '../components/Main/Cart/CartTab';
 import Contact from '../components/Main/Contact/Contact';
 import Home from '../components/Main/Home/HomeTab';
-import Search from '../components/Main/Search/SearchNavigator';
+import Search from '../components/Main/Search/SeearchTab';
 
 
 import Header from '../components/Header';

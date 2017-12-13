@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-        Dimensions, TouchableOpacity, Image, View, Text
+        TouchableOpacity, View, Text
 } from 'react-native';
 
 
@@ -13,7 +13,7 @@ class Cart extends Component {
                 return (
                         <View>
                                 <TouchableOpacity
-                                        onPress={() => this.props.navigation.navigate('ProductDetailScreen')}
+                                        onPress={() => this.GotoProduct()}
                                 >
 
                                         <Text >goto detail</Text>
