@@ -3,7 +3,7 @@ import {
         StatusBar
 } from 'react-native';
 
-import Root from './src/navigation/Tabbar';
+import Root from './src/navigation/Root';
 import Authentication from './src/components/Authemtication/Authentication'
 
 StatusBar.setHidden(true);
